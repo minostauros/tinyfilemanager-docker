@@ -1,6 +1,6 @@
 # tinyfilemanager-docker
 
-[![Docker Automated build](https://img.shields.io/docker/automated/tigerdockermediocore/tinyfilemanager-docker.svg)](https://hub.docker.com/r/tigerdockermediocore/tinyfilemanager-docker) [![Docker Build Status](https://img.shields.io/docker/build/tigerdockermediocore/tinyfilemanager-docker.svg)](https://hub.docker.com/r/tigerdockermediocore/tinyfilemanager-docker)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/tigerdockermediocore/tinyfilemanager-docker) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/tigerdockermediocore/tinyfilemanager-docker)
 
 **Simplest dockerized version of [tinyfilemanager](https://tinyfilemanager.github.io)**
 
