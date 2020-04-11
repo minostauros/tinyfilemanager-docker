@@ -4,7 +4,7 @@ LABEL maintainer minostauros <6764739+minostauros@users.noreply.github.com>
 
 ENV TINYFILEMANAGER_VERSION 2.4.1
 
-RUN apk --update add git less openssh && \
+RUN apk --update add git less zip openssh && \
     mkdir /app && \
     cd /app && \
     git clone --branch ${TINYFILEMANAGER_VERSION} \
