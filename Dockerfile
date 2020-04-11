@@ -4,7 +4,7 @@ LABEL maintainer minostauros <6764739+minostauros@users.noreply.github.com>
 
 ENV TINYFILEMANAGER_VERSION 2.4.1
 
-RUN apk --update add git less zip openssh && \
+RUN apk --update add git less openssh && \
     mkdir /app && \
     cd /app && \
     git clone --branch ${TINYFILEMANAGER_VERSION} \
@@ -14,6 +14,9 @@ RUN apk --update add git less zip openssh && \
     apk del git less openssh && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
+
+RUN apk --update add zip libzip-dev && \
+    docker-php-ext-install zip fileinfo
 
 WORKDIR /app/tinyfilemanager
 
