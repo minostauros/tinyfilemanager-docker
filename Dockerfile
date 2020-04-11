@@ -2,13 +2,10 @@ FROM php:alpine3.11
 
 LABEL maintainer minostauros <6764739+minostauros@users.noreply.github.com>
 
-ENV TINYFILEMANAGER_VERSION 2.4.1
-
 RUN apk --update add git less openssh && \
     mkdir /app && \
     cd /app && \
-    git clone --branch ${TINYFILEMANAGER_VERSION} \
-    				   https://github.com/prasathmani/tinyfilemanager.git && \
+    git clone https://github.com/prasathmani/tinyfilemanager.git && \
     sed -i.bak -e "s/\$root\_path = \$\_SERVER\['DOCUMENT_ROOT'\];/\$root_path = \'\/data\';/g" \
                   /app/tinyfilemanager/tinyfilemanager.php && \
     apk del git less openssh && \
