@@ -10,7 +10,7 @@ RUN apk --update add git less openssh && \
     git clone --branch ${TINYFILEMANAGER_VERSION} \
     				   https://github.com/prasathmani/tinyfilemanager.git && \
     sed -i.bak -e "s/\$root\_path = \$\_SERVER\['DOCUMENT_ROOT'\];/\$root_path = \'\/data\';/g" \
-                  /app/tinyfilemanager/tinyfilemanager.php && \
+                  /app/tinyfilemanager/config.php && \
     apk del git less openssh && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
